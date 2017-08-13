@@ -21,7 +21,7 @@ Run multiple machine learning binary classifiers (SVM, LDA, Decision Trees, KNN)
        'mediumGaussianSVM' 'coarseGaussianSVM' 'linearDisc' 'quadraticDisc'
        'simpleTree' 'mediumTree' 'complexTree' 'RUSBoostedTrees' 'ensembleBoostedTrees' 
        'ensembleBaggedTrees' 'fineKNN' 'mediumKNN' 'coarseKNN' 'cosineKNN' 
-       'cubicKNN' 'weightedKNN'}  
+       'cubicKNN' 'weightedKNN'}   
  
    Output:
        trainedClassifier: a struct containing the trained classifier. The

@@ -49,7 +49,7 @@ X = meas(inds,3:4);
 y = species(inds);
 y = single(ismember(y,'versicolor'));
 
-[trainClassifier, validationScores, validationPredictions] = trainClassifier(X,y,X,y,{'var1'; 'var2'},{'linearSVM'});
+[tClassifier, valScores, valPreds] = trainClassifier(X,y,X,y,{'var1'; 'var2'},{'linearSVM'});
 ```
 
 Tested on MATLAB 2017a.

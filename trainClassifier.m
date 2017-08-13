@@ -1,5 +1,6 @@
-function [trainedClassifier,validationScores,validationPredictions] = trainClassifier_MediumGaussianSVM(trainingData,outcomeTrain,testingData,outcomeTest,headers,type)
-% [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
+function [trainedClassifier,validationScores,validationPredictions] = trainClassifier(trainingData,outcomeTrain,testingData,outcomeTest,headers,type)
+% [trainedClassifier, validationAccuracy, validationPredictions] = 
+% 	trainClassifier(trainingData,outcomeTrain,testingData,outcomeTest,headers,type)
 % returns a trained classifier and its accuracy. This code recreates the
 % classification model trained in Classification Learner app. Use the
 % generated code to automate training the same model with new data, or to

@@ -1,2 +1,2 @@
 # ml-classifiers
-Run multiple machine learning binary classifiers from a single script (SVM, LDA, Decision Trees, KNN).
+Run multiple machine learning binary classifiers (SVM, LDA, Decision Trees, KNN) from a single MATLAB script.

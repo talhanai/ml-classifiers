@@ -1,5 +1,5 @@
 function [trainedClassifier,validationScores,validationPredictions] = trainClassifier(trainingData,outcomeTrain,testingData,outcomeTest,headers,type)
-% [trainedClassifier, validationAccuracy, validationPredictions] = 
+% [trainedClassifier, validationScores, validationPredictions] = 
 % 	trainClassifier(trainingData,outcomeTrain,testingData,outcomeTest,headers,type)
 % returns a trained classifier and its accuracy. This code recreates the
 % classification model trained in Classification Learner app. Use the
@@ -18,7 +18,7 @@ function [trainedClassifier,validationScores,validationPredictions] = trainClass
 %      'mediumGaussianSVM' 'coarseGaussianSVM' 'linearDisc' 'quadraticDisc'
 %      'simpleTree' 'mediumTree' 'complexTree' 'RUSBoostedTrees' 'ensembleBoostedTrees' 
 %      'ensembleBaggedTrees' 'fineKNN' 'mediumKNN' 'coarseKNN' 'cosineKNN' 
-%      'cubicKNN' 'weightedKNN'}  
+%      'cubicKNN' 'weightedKNN' 'logReg'}  
 %
 %  Output:
 %      trainedClassifier: a struct containing the trained classifier. The
@@ -295,6 +295,13 @@ elseif strmatch(type,'weightedKNN','exact')
     'DistanceWeight', 'SquaredInverse', ...
     'Standardize', true, ...
     'ClassNames', [0; 1]);
+
+elseif strmatch(type,'logReg','exact')
+    
+    classification = fitglm(...
+    inputTable, ...
+    'Distribution', 'binomial', ...
+    'link', 'logit');
 
 else
     sprintf('Error: The type variable you defined does not match.')

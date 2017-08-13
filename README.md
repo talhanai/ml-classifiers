@@ -37,3 +37,6 @@ Run multiple machine learning binary classifiers (SVM, LDA, Decision Trees, KNN)
        validationPredictions: a vector with class predictions.
  
 ```
+
+
+Tested on MATLAB 2017a.

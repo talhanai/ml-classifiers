@@ -2,7 +2,7 @@
 Run multiple machine learning binary classifiers (SVM, LDA, Decision Trees, KNN) from a single MATLAB script based on the Classfication Learner application.
 
 ```
-  [trainedClassifier, validationAccuracy, validationPredictions] = 
+    [trainedClassifier, validationScores, validationPredictions] = 
   	trainClassifier(trainingData,outcomeTrain,testingData,outcomeTest,headers,type)
   returns a trained classifier and its accuracy. This code recreates the
   classification model trained in Classification Learner app. Use the
@@ -35,4 +35,5 @@ Run multiple machine learning binary classifiers (SVM, LDA, Decision Trees, KNN)
        column == class 0, second column == class 1)
  
        validationPredictions: a vector with class predictions.
+ 
 ```
